@@ -1,9 +1,11 @@
 // Функция для генерации случайного JSON-объекта
 function generateRandomJson() {
     const randomData = {
-        field1: 'aaa',
-        field2: 'bbb',
-        field3: 'ccc'
+        field1: Math.random().toString(36).substring(7),
+        field2: Date.now(),
+        field3: {
+            nestedField: 'some value'
+        }
     };
 
     // Отправляем JSON в консоль (можно заменить на отправку на сервер)
