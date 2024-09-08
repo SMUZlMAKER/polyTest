@@ -1,16 +1,19 @@
-// Функция для генерации случайного JSON-объекта
-function generateRandomJson() {
-    const randomData = {
-        field1: Math.random().toString(36).substring(7),
-        field2: Date.now(),
-        field3: {
-            nestedField: 'some value'
-        }
-    };
+const express = require('express');
+const app = express();
+const port = 3000;
 
-    // Отправляем JSON в консоль (можно заменить на отправку на сервер)
-    console.log(JSON.stringify(randomData));
-}
+// Заранее определенный JSON
+const myJson = {
+  name: 'John Doe',
+  age: 30,
+  city: 'New York'
+};
 
-// Вызываем функцию при загрузке страницы
-window.onload = generateRandomJson;
+// Обработчик GET запросов
+app.get('/', (req, res) => {
+  res.json(myJson);
+});
+
+app.listen(port, () => {
+  console.log(Server listening on port ${port});
+});
