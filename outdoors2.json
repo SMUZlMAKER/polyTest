@@ -13,7 +13,6 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "scheme": "xyz",
       "url": "https://tiles.stadiamaps.com/data/openmaptiles.json?api_key=ee13b53e-3641-4e4f-8c5f-502930137ea5"
     }
   },
